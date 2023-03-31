@@ -78,8 +78,7 @@ img {
     text-decoration: none;
     transition: color var(--transition-duration) var(--transition-timing-function);
 }
-.link:hover,
-.link:focus {
+.link:is(:hover,:focus) {
     color: var(--pressed-state);
 }
 .logo-studio {
@@ -117,6 +116,7 @@ img {
     display: flex;
 }
 .address-list .item {
+    font-weight: 400;
     font-size: 16px;
     padding: 24px 0;
     line-height: 1.5;
@@ -514,7 +514,7 @@ img {
     transform: translateY(100%);
     transition: transform var(--transition-duration) var(--transition-timing-function);
 }
-.card .item:hover .caption {
+.card .link:is(:hover,:focus) .caption {
     opacity: 1;
     transform: translateY(0);
 }
